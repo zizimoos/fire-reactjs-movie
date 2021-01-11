@@ -40,12 +40,8 @@ const HomeContainer = () => {
   };
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      getMovieApi();
-    }, 10000);
-    return () => clearInterval(interval);
+    getMovieApi();
   }, []);
-
   console.log(state);
   const { nowPlaying, upComing, popular, error, loading } = state;
   return (

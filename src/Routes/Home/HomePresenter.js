@@ -1,7 +1,9 @@
-import React from "react";
+const HomePresenter = ({ nowPlaying, upComing, popular, error, loading }) => {
+  nowPlaying &&
+    nowPlaying.length > 0 &&
+    nowPlaying.map((n) => console.log(n.title));
 
-const HomePresenter = () => {
-  return <h1>HomePresenter</h1>;
+  return <h1>nowPlaying</h1>;
 };
 
 export default HomePresenter;
