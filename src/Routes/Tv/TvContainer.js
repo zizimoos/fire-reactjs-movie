@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { tvApi } from "../../api";
 import TvPresenter from "./TvPresenter";
 
-const TvContainer = () => {
+const TvContainer = (props) => {
   const [state, setState] = useState({
     topRated: null,
     airingToday: null,
@@ -10,6 +10,8 @@ const TvContainer = () => {
     error: null,
     loading: true,
   });
+
+  console.log(props);
 
   const getTvApi = async () => {
     try {
